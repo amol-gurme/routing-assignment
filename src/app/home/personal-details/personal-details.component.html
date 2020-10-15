@@ -1,0 +1,82 @@
+<div class="container">
+  <form [formGroup]="personalDetls" (ngSubmit)="onFormSubmit()" class="form-horizontal">
+    <div class="container">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Enter Personal Details</h3>
+        </div>
+        <div class="panel-body">
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="fullName">Full Name</label>
+            <div class="col-sm-4">
+              <input id="id1" type="text" class="form-control" formControlName="fullName">
+              <span class="help-block" *ngIf="((personalDetls.get('fullName').touched ||
+              personalDetls.get('fullName').dirty) &&
+              personalDetls.get('fullName').errors)">
+                <span class="errorClass" *ngIf="personalDetls.get('fullName').errors.required">
+                  Full Name is required
+                </span>
+                <span class="errorClass" *ngIf="personalDetls.get('fullName').errors.pattern">
+                  Please enter valid name
+                </span>
+              </span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="email">Email</label>
+            <div class="col-sm-4">
+              <input id="id2" type="text" class="form-control" formControlName="email">
+              <span class="help-block" *ngIf="((personalDetls.get('email').touched ||
+              personalDetls.get('email').dirty) &&
+              personalDetls.get('email').errors)">
+                <span class="errorClass" *ngIf="personalDetls.get('email').errors.required">
+                 Email is required
+                </span>
+                <span class="errorClass" *ngIf="personalDetls.get('email').errors.pattern">
+                  Please enter valid Email
+                </span>
+              </span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="mobile">Mobile</label>
+            <div class="col-sm-4">
+              <input id="id3" type="text" class="form-control" formControlName="mobile">
+              <span class="help-block" *ngIf="((personalDetls.get('mobile').touched ||
+              personalDetls.get('mobile').dirty) &&
+              personalDetls.get('mobile').errors)">
+                <span class="errorClass" *ngIf="personalDetls.get('mobile').errors.required">
+                 Mobile No. is required
+                </span>
+                <span class="errorClass" *ngIf="personalDetls.get('mobile').errors.pattern">
+                  Please enter valid Mobile No.
+                </span>
+              </span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="email">Date Of Birth</label>
+            <div class="col-sm-4">
+              <input id="id4" type="date" class="form-control" formControlName="dob">
+            </div>
+          </div>
+
+
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="email">Address</label>
+            <div class="col-sm-4">
+              <textarea id="id5" type="text" class="form-control" formControlName="address"></textarea>
+            </div>
+          </div>
+
+        </div>
+        <div class="panel-footer textAlign">
+          <button class="btn btn-primary" [disabled]="personalDetls.invalid" type="submit">Save</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
