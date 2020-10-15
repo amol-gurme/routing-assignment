@@ -23,15 +23,15 @@ This project was generated with angular cli Version 9.1.12
 
 **Follow below steps**
 1.Clone the Repository
-2.After Cloning go to projct folder using command  : cd routing-assignment/
+2.After Cloning go to projct folder using command  : 'cd routing-assignment/'
 3.use below command to checkout master branch
- git checkout master
+   'git checkout master'
 
 4.run below command 
-  sudo npm install
+  'sudo npm install'
 
 5.run below command to build and serve the application on port 4200
- ng serve --poll=2000
+ 'ng serve --poll=2000'
 
 
 
