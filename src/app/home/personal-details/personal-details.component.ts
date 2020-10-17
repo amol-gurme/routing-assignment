@@ -17,11 +17,11 @@ export class PersonalDetailsComponent implements OnInit {
 
   initForm(){
     this.personalDetls = this.fb.group({
-      fullName : ['',[Validators.required,Validators.minLength(1),Validators.maxLength(50),Validators.pattern("^[a-z A-Z]{1,50}$")]],
-      email : ['',[Validators.required,Validators.pattern("^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$")]],
-      mobile:['',[Validators.required,Validators.minLength(10),Validators.maxLength(10),Validators.pattern("[789]{1}[0-9]{9}")]],
-      dob:['',[Validators.required]],
-      address:['',[Validators.required]]
+      fullName : ['Amol Gurme',[Validators.required,Validators.minLength(1),Validators.maxLength(50),Validators.pattern("^[a-z A-Z]{1,50}$")]],
+      email : ['gurme95@gmail.com',[Validators.required,Validators.pattern("^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$")]],
+      mobile:['9503598265',[Validators.required,Validators.minLength(10),Validators.maxLength(10),Validators.pattern("[789]{1}[0-9]{9}")]],
+      dob:['1994-09-29',[Validators.required]],
+      address:['Pune,Maharashtra',[Validators.required]]
     })
   }
   

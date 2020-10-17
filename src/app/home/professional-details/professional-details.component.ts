@@ -17,12 +17,12 @@ export class ProfessionalDetailsComponent implements OnInit {
 
   initFormDetls(){
   this.professionalDetls = this.fb.group({
-     'sTypeOfProfession':['',[Validators.required]],
-     'sSkillName':[''],
-     'proficiency':[''],
-     'experienceInYears':['',[Validators.required,Validators.minLength(0),Validators.maxLength(50)]],
-     'employerName':['',[Validators.required]],
-     'officeEmail':['',[Validators.required,Validators.pattern("^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$")]]
+     'sTypeOfProfession':['Software Developer',[Validators.required]],
+     'sSkillName':['HTML,CSS,JavaScript,Bootstrap,Angular4+'],
+     'proficiency':['Intermediate'],
+     'experienceInYears':['2.7',[Validators.required,Validators.minLength(0),Validators.maxLength(50)]],
+     'employerName':['Lentra AI Pvt Ltd',[Validators.required]],
+     'officeEmail':['amolgurme@lentra.ai',[Validators.required,Validators.pattern("^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$")]]
   })
   }
 
